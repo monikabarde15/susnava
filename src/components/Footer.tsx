@@ -1,4 +1,5 @@
 import { Sun, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import Logo from "@/assets/logo-removebg-preview.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,8 +11,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-                <img src="/public/logo-removebg-preview.png" alt="" className="w-30 h-11 object-cover group-hover:scale-105 transition-transform duration-300"/>
-            </div>
+<img 
+              src={Logo} 
+              alt="Logo" 
+              className="w-30 h-11 object-cover group-hover:scale-105 transition-transform duration-300"
+            />            </div>
             <p className="text-muted-foreground">
               Engineering services company founded by technocrats with 15+ years of experience. Specializing in power systems, industrial design, and sustainable engineering solutions for a better future.
             </p>
