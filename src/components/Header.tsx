@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sun, Menu } from "lucide-react";
+import Logo from "@/assets/logo-removebg-preview.png";
 
 const Header = () => {
   return (
@@ -8,7 +9,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src="/public/logo-removebg-preview.png" alt="" className="w-30 h-11 object-cover group-hover:scale-105 transition-transform duration-300"/>
+            <img 
+              src={Logo} 
+              alt="Logo" 
+              className="w-30 h-11 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
 
           {/* Desktop Navigation */}
