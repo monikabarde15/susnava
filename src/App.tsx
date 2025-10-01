@@ -15,6 +15,12 @@ import SustainabilitySolutions from "./pages/services/SustainabilitySolutions";
 import NotFound from "./pages/NotFound";
 import ContactUs from "./pages/ContactUs";
 import SubServoces from "./pages/services/Electrifications";
+import AdminPages from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+import ContactList from "./pages/ContactList";
+import BlogsList from "./pages/BlogsList";
+import AddNewBlog from "./pages/AddNewBlog";
+import EditBlog from "./pages/EditBlog";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +42,13 @@ const App = () => (
           <Route path="/services/industrial-plant-design" element={<IndustrialPlantDesign />} />
           <Route path="/services/sustainability-solutions" element={<SustainabilitySolutions />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+           <Route path="/admin/login" element={<AdminPages />} />
+           <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/contact" element={<ContactList />} />
+            <Route path="/admin/blogs" element={<BlogsList />} />
+            <Route path="/admin/addnewblog" element={<AddNewBlog />} />
+            <Route path="/admin/blogedit/:id" element={<EditBlog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

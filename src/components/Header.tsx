@@ -34,11 +34,11 @@ const Header = () => {
               Career
             </a>
             <a href="/contact" className="text-foreground/80 hover:text-primary transition-smooth">
-              Contact
+              Contact Us
             </a>
-            <Button variant="default" className="bg-gradient-primary hover:shadow-green transition-smooth">
+            {/* <Button variant="default" className="bg-gradient-primary hover:shadow-green transition-smooth">
               LET'S EXPLORE
-            </Button>
+            </Button> */}
           </nav>
 
           {/* Mobile Menu Button */}

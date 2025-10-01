@@ -46,28 +46,30 @@ const WhyUs = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
-            return (
-              <Card key={index} className="group hover:shadow-green transition-all duration-300 hover:-translate-y-1 border-border/50">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-green transition-all duration-300">
-                    <Icon className="w-8 h-8 text-primary-foreground" />
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">
-                    {benefit.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  {benefits.map((benefit, index) => {
+    const Icon = benefit.icon;
+    return (
+      <Card
+        key={index}
+        className="group hover:shadow-green transition-all duration-300 hover:-translate-y-1 border-border/50 flex flex-col h-full"
+      >
+        <CardContent className="p-8 text-center flex flex-col h-full justify-between">
+          <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-green transition-all duration-300">
+            <Icon className="w-8 h-8 text-primary-foreground" />
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">
+              {benefit.title}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  })}
+</div>
+
       </div>
     </section>
   );

@@ -17,14 +17,14 @@ const Footer = () => {
               className="w-30 h-11 object-cover group-hover:scale-105 transition-transform duration-300"
             />            </div>
             <p className="text-muted-foreground">
-              Engineering services company founded by technocrats with 15+ years of experience. Specializing in power systems, industrial design, and sustainable engineering solutions for a better future.
-            </p>
-            <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-            </div>
+              An Engineering Services and Solutions company, 
+founded by technocrats with 20+ years of 
+expertise and guided by 50 years of collective 
+insight. specialize in Power System Studies, Power 
+Engineering, Industrial Design, and Project 
+Management, delivering innovative  solutions for a 
+sustainable future.            </p>
+            
           </div>
 
           {/* Services */}
@@ -43,13 +43,16 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-muted-foreground">
+              <li><a href="/about" className="hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="/blog" className="hover:text-primary transition-colors">Blogs</a></li>
+              <li><a href="/career" className="hover:text-primary transition-colors">Career</a></li>
               <li><a href="/contact" className="hover:text-primary transition-colors">Contact Us</a></li>
-              <li><a href="#about" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#sustainability" className="hover:text-primary transition-colors">Sustainability</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-              <li><a href="/blog" className="hover:text-primary transition-colors">News & Blog</a></li>
+             
+              {/* <li><a href="#sustainability" className="hover:text-primary transition-colors">Sustainability</a></li> */}
+                            
             </ul>
           </div>
+          
 
           {/* Contact */}
           <div>
@@ -74,9 +77,16 @@ const Footer = () => {
         <hr className="my-8 border-border/50" />
         
         <div className="flex flex-col md:flex-row justify-between items-center">
+          
           <p className="text-muted-foreground text-sm">
             © {currentYear} SUSNAVA Tech LLP. All rights reserved.
           </p>
+          <div className="flex space-x-4">
+              <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+            </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Privacy Policy</a>
             <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Terms of Service</a>

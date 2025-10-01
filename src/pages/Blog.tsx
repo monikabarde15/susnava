@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 
-const SERVER_URL = "https://newadmin-u8tx.onrender.com";
+const SERVER_URL = "https://susnavabackend.onrender.com";
 const POSTS_PER_PAGE = 6; // ✅ 6 per page
 
 const Blog = () => {

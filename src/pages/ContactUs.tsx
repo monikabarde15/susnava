@@ -5,6 +5,7 @@ import { MapPin, Users } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
+import solarHome from "@/assets/solar-home.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -28,7 +29,7 @@ const ContactUs = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("https://newadmin-u8tx.onrender.com/api/contact", {
+      const res = await fetch("https://susnavabackend.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -71,6 +72,11 @@ const ContactUs = () => {
             <p className="text-lg text-green-800 max-w-3xl mx-auto">
               We lead innovation with power systems, engineering, and sustainable
               solutions.
+            </p>
+             <p className="text-lg text-green-800 max-w-3xl mx-auto">
+              Support Our Mission:
+At Susnava, we’re not only driving the next generation of innovation — we’re equally committed to maximizing
+the sustainability of existing resources, creating a smarter, more resilient ecosystem for the future.
             </p>
           </motion.div>
         </div>
@@ -142,42 +148,50 @@ const ContactUs = () => {
 
         {/* Our Address */}
         <motion.div
-          className="flex-1 bg-gradient-to-tr from-green-600 to-green-500 text-white rounded-3xl p-12 shadow-2xl flex flex-col justify-between cursor-pointer"
-          variants={fadeInUp}
-          whileHover={{ scale: 1.03, boxShadow: "0 20px 40px rgba(0,0,0,0.25)" }}
-          transition={{ type: "spring", stiffness: 200 }}
-        >
-          <div className="flex items-center mb-10">
-            <MapPin className="w-12 h-12 drop-shadow-lg" />
-            <h3 className="text-4xl font-extrabold ml-4 drop-shadow-lg uppercase">
-              Our Address
-            </h3>
-          </div>
+            className="flex-1 bg-gradient-to-tr from-green-600 to-green-500 text-white rounded-3xl p-12 shadow-2xl flex flex-col cursor-pointer"
+            variants={fadeInUp}
+            whileHover={{ scale: 1.03, boxShadow: "0 20px 40px rgba(0,0,0,0.25)" }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <div className="flex items-center mb-8"> {/*Reduced margin*/}
+              <MapPin className="w-12 h-12 drop-shadow-lg" />
+              <h3 className="text-4xl font-extrabold ml-4 drop-shadow-lg uppercase">
+                Our Address
+              </h3>
+            </div>
 
-          <address className="not-italic prose max-w-none mb-10 drop-shadow-sm">
-            <p>SUSNAVA</p>
-            <p>Village Dadhpa, Post Amba</p>
-            <p>Thana Kutumba, District Aurangabad</p>
-            <p>Bihar - 824111</p>
-            <p>
-              Phone:{" "}
-              <a href="tel:+917295025895" className="underline hover:text-green-200">
-                +91 72950 25895
-              </a>
-            </p>
-            <p>
-              Email:{" "}
-              <a href="mailto:connect@susnava.com" className="underline hover:text-green-200">
-                connect@susnava.com
-              </a>
-            </p>
-          </address>
+            <address className="not-italic prose max-w-none mb-4 drop-shadow-sm"> {/*Reduced margin*/}
+              <p>SusNava Tech LLP</p>
+              <p>Village Dadhpa, Post Amba</p>
+              <p>Thana Kutumba, District Aurangabad</p>
+              <p>Bihar - 824111</p>
+              <p>
+                Phone:{" "}
+                <a href="tel:+917295025895" className="underline hover:text-green-200">
+                  +91 72950 25895
+                </a>
+              </p>
+              <p>
+                Email:{" "}
+                <a href="mailto:connect@susnava.com" className="underline hover:text-green-200">
+                  connect@susnava.com
+                </a>
+              </p>
+            </address>
 
-          <div className="flex items-center text-lg drop-shadow-md">
-            <Users className="w-10 h-10 mr-3" />
-            <span>Reach out to our dedicated team for support</span>
-          </div>
-        </motion.div>
+            {/* Dummy Image */}
+            <div className="h-68 flex items-center text-lg drop-shadow-md mt-3">
+              <div className="w-full h-49 rounded-lg overflow-hidden mb-2 top-17 flex justify-center items-center bg-white/10">
+              <img
+  src={solarHome}
+  alt="Dummy Company"
+  className="object-cover w-full h-full"
+/>
+
+            </div>
+            </div>
+          </motion.div>
+
       </motion.section>
 
       {/* Map Below Sections */}

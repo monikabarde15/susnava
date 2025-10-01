@@ -83,83 +83,49 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-          {services.slice(0, 3).map((service, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {services.map((service) => {
             const Icon = service.icon;
             return (
               <Card
                 key={service.id}
-                className={`group cursor-pointer hover:shadow-green transition-all duration-300 ${index === 1 ? 'lg:scale-105' : ''}`}
+                className="group hover:shadow-green transition-all duration-300 hover:-translate-y-2 overflow-hidden flex flex-col h-full cursor-pointer"
                 onClick={() => handleCardClick(service.id)}
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={service.image}
+                  <img 
+                    src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 left-4 bg-primary rounded-full p-3">
+                  <div className="absolute top-4 left-4 p-3 bg-primary rounded-full">
                     <Icon className="w-6 h-6 text-primary-foreground" />
                   </div>
                 </div>
-
+                
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold mb-2">{service.title}</CardTitle>
-                  <p className="text-muted">{service.description}</p>
+                  <p className="text-muted-foreground">{service.description}</p>
                 </CardHeader>
-                <CardContent>
+
+                <CardContent className="flex flex-col flex-1 justify-between">
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-2">
-                        <CheckCircle className="w-5 h-5 text-primary mt-1" />
-                        <span>{feature}</span>
+                      <li key={idx} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <Button variant="outline" className="w-full flex items-center justify-center gap-2" onClick={() => handleCardClick(service.id)}>
-                    GET STARTED <ArrowRight className="w-4 h-4" />
-                  </Button>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {services.slice(3).map((service) => {
-            const Icon = service.icon;
-            return (
-              <Card
-                key={service.id}
-                className="group cursor-pointer hover:shadow-green transition-all duration-300"
-                onClick={() => handleCardClick(service.id)}
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute top-4 left-4 bg-primary rounded-full p-3">
-                    <Icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                </div>
-
-                <CardHeader>
-                  <CardTitle className="text-xl font-semibold mb-2">{service.title}</CardTitle>
-                  <p className="text-muted">{service.description}</p>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-2">
-                        <CheckCircle className="w-5 h-5 text-primary mt-1" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button variant="outline" className="w-full flex items-center justify-center gap-2" onClick={() => handleCardClick(service.id)}>
-                    GET STARTED <ArrowRight className="w-4 h-4" />
+                  <Button 
+                    className="w-full bg-gradient-primary hover:shadow-medium transition-smooth group mt-auto"
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent card click when button is clicked
+                      handleCardClick(service.id);
+                    }}
+                  >
+                    GET STARTED
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
               </Card>

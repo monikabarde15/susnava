@@ -9,8 +9,22 @@ const services = [
   {
     icon: Building,
     title: "Substation Design & Engineering",
-    description: "Comprehensive substation design from concept to commissioning, ensuring optimal performance and reliability.",
-    features: ["Primary & Secondary Design", "Protection Schemes", "SCADA Integration", "Compliance with Standards"]
+    description: "Our designs ensure safe, reliable, and efficient power distribution compliant with industry standards.",
+    features: ["Primary & Secondary Design", "Protection Schemes", "Feasibility Layouts", "System Upgrades"]
+  },
+   {
+    icon: Shield,
+    title: "Relay Coordination & Protection",
+    description: "Optimized protection schemes to ensure system reliability and minimize equipment damage during faults.",
+    features: ["Protection Philosophy", "Relay Settings", "Coordination Studies", "Testing & Commissioning"]
+  },
+  
+ 
+  {
+    icon: TrendingUp,
+    title: "T&D Planning & System Optimization",
+    description: "Strategic transmission and distribution planning to optimize system capacity and performance.",
+    features: ["Load Forecasting", "System Expansion Planning", "Asset Optimization", "Reliability Analysis"]
   },
   {
     icon: Grid3x3,
@@ -19,28 +33,22 @@ const services = [
     features: ["Renewable Integration", "Smart Grid Architecture", "Grid Modernization", "Energy Management Systems"]
   },
   {
-    icon: Shield,
-    title: "Relay Coordination & Protection",
-    description: "Optimized protection schemes to ensure system reliability and minimize equipment damage during faults.",
-    features: ["Protection Philosophy", "Relay Settings", "Coordination Studies", "Testing & Commissioning"]
-  },
-  {
-    icon: TrendingUp,
-    title: "T&D Planning & System Optimization",
-    description: "Strategic transmission and distribution planning to optimize system capacity and performance.",
-    features: ["Load Forecasting", "System Expansion Planning", "Asset Optimization", "Reliability Analysis"]
-  },
-  {
     icon: Settings,
-    title: "Power System Modernization",
+    title: "Utilities Upgrades & Modernization",
     description: "Upgrading legacy power systems with modern technologies for improved efficiency and reliability.",
     features: ["System Upgrades", "Technology Integration", "Performance Enhancement", "Future-Proofing"]
   },
-  {
+  // {
+  //   icon: Zap,
+  //   title: "Electrical Infrastructure Design",
+  //   description: "Complete electrical infrastructure design for industrial, commercial, and utility applications.",
+  //   features: ["System Architecture", "Equipment Selection", "Installation Planning", "Testing Procedures"]
+  // },
+   {
     icon: Zap,
-    title: "Electrical Infrastructure Design",
-    description: "Complete electrical infrastructure design for industrial, commercial, and utility applications.",
-    features: ["System Architecture", "Equipment Selection", "Installation Planning", "Testing Procedures"]
+    title: "Project Management Support",
+    description: "Providing seamless project management for timely, efficient,and safe power engineering delivery.",
+    features: ["Planning & Scheduling", "Engineering Coordination and Monitoring", "Installation & Commissioning Support", "As-builts Documentation Support"]
   }
 ];
 
@@ -73,13 +81,13 @@ const PowerEngineering = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="outline" className="mb-4">Power Engineering</Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Empowering Progress with Innovation
+            <h1 className="text-3xl md:text-4xl font-bold mb-6">
+              Engineering the Future of Power
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Empowering progress with innovative, reliable, and sustainable power engineering solutions for 
-              Transmission, Distribution system and Substation Design, Planning and Upgrades. We deliver 
-              cutting-edge engineering excellence that drives the future of power systems.
+            We are dedicated to shape a future where energy is accessible, resilient, and sustainable as well as focused on future-ready
+            grid systems, we integrate renewable energy sources, optimize distribution networks, and support sustainable energy
+            solutions, ultimately empowering businesses and industries to maintain efficient, safe, and resilient electrical systems.
             </p>
             <Button size="lg" className="bg-gradient-primary hover:shadow-green transition-smooth">
               Explore Our Solutions
@@ -129,7 +137,7 @@ const PowerEngineering = () => {
       </section>
 
       {/* Core Capabilities */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Core Capabilities</h2>
@@ -154,7 +162,7 @@ const PowerEngineering = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Process & Approach */}
       <section className="py-16">
@@ -180,13 +188,13 @@ const PowerEngineering = () => {
               },
               {
                 step: "03",
-                title: "Implementation & Integration",
-                description: "Seamless implementation and system integration with existing infrastructure"
+                title: "Implementation",
+                description: "A rigorous review and approval process to ensure flawless implementation"
               },
               {
                 step: "04",
-                title: "Testing & Optimization",
-                description: "Comprehensive testing, commissioning, and performance optimization"
+                title: "Optimization",
+                description: "Onsite Installation and commissioning Support to eliminate execution issues"
               }
             ].map((process, index) => (
               <div key={index} className="text-center">
@@ -217,22 +225,22 @@ const PowerEngineering = () => {
                 title: "Innovative Solutions",
                 description: "Cutting-edge engineering approaches that deliver reliable and efficient power systems"
               },
-              {
-                title: "Industry Expertise", 
-                description: "Deep domain knowledge with 15+ years of experience in power system engineering"
-              },
+              // {
+              //   title: "Industry Expertise", 
+              //   description: "Deep domain knowledge with 15+ years of experience in power system engineering"
+              // },
               {
                 title: "Sustainable Design",
                 description: "Environmentally conscious engineering that supports long-term sustainability goals"
               },
-              {
-                title: "Proven Track Record",
-                description: "Successful delivery of complex power engineering projects across diverse industries"
-              },
-              {
-                title: "Advanced Technology",
-                description: "Utilizing the latest software tools and methodologies for accurate analysis and design"
-              },
+              // {
+              //   title: "Proven Track Record",
+              //   description: "Successful delivery of complex power engineering projects across diverse industries"
+              // },
+              // {
+              //   title: "Advanced Technology",
+              //   description: "Utilizing the latest software tools and methodologies for accurate analysis and design"
+              // },
               {
                 title: "Comprehensive Support",
                 description: "End-to-end engineering support from concept development to system commissioning"

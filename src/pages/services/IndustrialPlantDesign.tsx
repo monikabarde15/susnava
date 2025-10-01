@@ -4,53 +4,63 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, Building, FileText, Search, Settings, PenTool, Wrench } from "lucide-react";
+import { features, title } from "process";
 
 const services = [
-  {
-    icon: Building,
-    title: "Electrical Design & Engineering",
-    description: "Complete electrical system design for industrial plants with focus on safety, efficiency, and compliance.",
-    features: ["Power Distribution Design", "Lighting System Design", "Grounding & Bonding", "Electrical Load Analysis"]
-  },
-  {
-    icon: PenTool,
-    title: "2D/3D Drafting & Documentation",
-    description: "Professional drafting services using latest CAD technologies for accurate and detailed technical drawings.",
-    features: ["AutoCAD 2D Drawings", "3D Modeling & Visualization", "As-Built Documentation", "Technical Specifications"]
-  },
+  
   {
     icon: Search,
     title: "Feasibility Studies & Analysis",
     description: "Comprehensive feasibility studies to evaluate project viability and optimize design approaches.",
-    features: ["Technical Feasibility", "Economic Analysis", "Risk Assessment", "Alternative Evaluation"]
+    features: ["Technical Feasibility", "Economic Analysis", "Risk Assessment", "Alternative Evaluation",'Best Value Option Analysis']
   },
-  {
-    icon: Settings,
-    title: "Instrumentation & Control Design",
-    description: "Advanced instrumentation and control system design for process optimization and automation.",
-    features: ["Control System Architecture", "SCADA Design", "PLC Programming", "HMI Development"]
-  },
-  {
+   {
     icon: Wrench,
     title: "Detailed Engineering Support",
     description: "Comprehensive engineering support throughout project lifecycle from concept to commissioning.",
     features: ["Engineering Calculations", "Vendor Coordination", "Construction Support", "Commissioning Assistance"]
   },
   {
-    icon: FileText,
-    title: "Documentation & Compliance",
-    description: "Complete documentation packages ensuring regulatory compliance and industry standards adherence.",
-    features: ["Regulatory Compliance", "Safety Documentation", "Quality Assurance", "Standard Compliance"]
-  }
+    icon: PenTool,
+    title: "2D/3D Drafting & Documentation",
+    description: "Professional drafting services using latest CAD technologies for accurate and detailed technical drawings.",
+    features: ["AutoCAD 2D Drawings", "3D Modeling & Visualization", "As-Built Documentation", "Technical:Documentations"]
+  },
+  
+  {
+    icon: Building,
+    title: "Electrical Design & Engineering",
+    description: "Complete electrical system design for industrial plants with focus on safety, efficiency, and compliance.",
+    features: ["Power Distribution Design", "Lighting System Design", "Grounding & Bonding", "Electrical Load Analysis",'Cable & Cable Tray Design']
+  },
+  {
+    icon: Settings,
+    title: "Instrumentation & Control Design",
+    description: "Advanced instrumentation and control system design for process optimization and automation.",
+    features: ["Control System Architecture", "Power and Control Panel Design", "Control Panel Design", "PLC Panel Design"]
+  },
+  {
+    icon:Wrench,
+    title:'Project Management Support',
+    description:"Providing seamless project management for timely, efficient,and safe power engineering delivery",
+    features:["Planning & Scheduling","Coordination and Monitoring","Onsite Support","As-builts Drawing Support"]
+  },
+  
+  // {
+  //   icon: FileText,
+  //   title: "Documentation & Compliance",
+  //   description: "Complete documentation packages ensuring regulatory compliance and industry standards adherence.",
+  //   features: ["Regulatory Compliance", "Safety Documentation", "Quality Assurance", "Standard Compliance"]
+  // }
 ];
 
 const industries = [
   {
-    title: "Oil & Gas",
+    title: "Power and Energy",//"Oil & Gas",
     description: "Specialized electrical design for upstream, midstream, and downstream operations including hazardous area classifications."
   },
   {
-    title: "Manufacturing",
+    title: "Oil & Gas",//"Manufacturing",
     description: "Industrial electrical systems for manufacturing facilities focusing on automation, efficiency, and productivity."
   },
   {
@@ -58,15 +68,15 @@ const industries = [
     description: "Robust electrical solutions for mining operations and metal processing facilities in challenging environments."
   },
   {
-    title: "Chemical & Petrochemical",
+    title: "FMCG & CPG",//"Chemical & Petrochemical",
     description: "Safe and reliable electrical designs for chemical processing plants with strict safety and environmental requirements."
   },
   {
-    title: "Power Generation",
+    title: "Food & Beverages",//"Power Generation",
     description: "Electrical infrastructure design for conventional and renewable power generation facilities."
   },
   {
-    title: "Water Treatment",
+    title: "Water",
     description: "Specialized electrical systems for water treatment plants and wastewater processing facilities."
   }
 ];
@@ -94,7 +104,7 @@ const IndustrialPlantDesign = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="outline" className="mb-4">Industrial Plant Design</Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-4xl font-bold mb-6">
               Comprehensive Industrial Electrical Design
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -115,9 +125,10 @@ const IndustrialPlantDesign = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Design Services</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Industrial Plant Design Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end industrial plant design services from concept to commissioning
+             We collaborate at each stage of the project cycle like estimation, scope definition, execution and risk management
+which enable our client to focus on their core priority and helps to achieve their innovation goals.
             </p>
           </div>
 
@@ -154,7 +165,7 @@ const IndustrialPlantDesign = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Industry Expertise</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Serving Industries, and Beyond…</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Specialized knowledge across diverse industrial sectors
             </p>
@@ -176,7 +187,7 @@ const IndustrialPlantDesign = () => {
       </section>
 
       {/* Technical Capabilities */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Technical Capabilities</h2>
@@ -198,13 +209,13 @@ const IndustrialPlantDesign = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Design Process */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Design Process</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Engineering Design Process</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Systematic approach ensuring quality, efficiency, and compliance
             </p>
@@ -259,7 +270,7 @@ const IndustrialPlantDesign = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Our Industrial Design</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Our Industrial Plant Design</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Experience the advantage of working with industrial design experts
             </p>
@@ -302,10 +313,10 @@ const IndustrialPlantDesign = () => {
       <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Design Your Industrial Plant?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Drive your Industrial Plant Design Project?</h2>
             <p className="text-xl text-muted-foreground mb-8">
               Let our experienced team help you create efficient, safe, and sustainable 
-              industrial electrical systems tailored to your specific requirements.
+              industrial Design electrical systems tailored to your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary hover:shadow-green transition-smooth">

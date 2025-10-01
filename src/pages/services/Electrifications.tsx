@@ -9,7 +9,7 @@ const services = [
   {
     icon: Sun,
     title: "Solar Plant Design & Engineering",
-    description: "Complete solar photovoltaic system design from feasibility studies to grid-connected installations.",
+    description: "We provide solar design, component selection, and commissioning support, ensuring efficiency & compliance for residential, commercial, and industrial projects.",
     features: ["Site Assessment & Analysis", "System Design & Optimization", "Grid Integration Studies", "Performance Monitoring Systems"]
   },
   {
@@ -73,13 +73,13 @@ const Electrifications = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="outline" className="mb-4">Electrifications</Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-4xl font-bold mb-6">
               Driving Sustainable Energy Adoption
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Driving sustainable energy adoption with advanced electrification solutions like Smart Grids, 
-              Energy Management, renewable Energy integration, Power Systems and Grid Upgrades. 
-              Complete electrification solutions from solar plant design to industrial electrification and energy storage systems.
+              We specialize in integrating advanced technologies to optimize energy use, improve
+safety, and support the seamless transition to renewable energy sources, ensuring
+reliable and future-ready infrastructures.
             </p>
             <Button size="lg" className="bg-gradient-primary hover:shadow-green transition-smooth">
               Electrify Your Future
@@ -129,7 +129,7 @@ const Electrifications = () => {
       </section>
 
       {/* Technologies */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Advanced Technologies</h2>
@@ -158,10 +158,10 @@ const Electrifications = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Project Lifecycle */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Project Lifecycle</h2>
@@ -208,13 +208,13 @@ const Electrifications = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Benefits of Electrification</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Electrification Matters</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Transform your energy infrastructure with sustainable and efficient electrification solutions
             </p>

@@ -64,13 +64,21 @@ const additionalStudies = [
   {
     title: "Insulation Coordination Study", 
     description: "We analyze electrical system voltages and insulation levels to ensure proper coordination, preventing equipment insulation failure and enhancing system reliability and safety."
+  },
+  {
+    title: "Reliability and Contingency Studies", 
+    description: "We assess power systems to withstand failures, faults, and contingencies, ensuring uninterrupted supply, N-1/N-2 compliance, and enhanced resilience for industries and utilities."
   }
 ];
 
-const tools = [
-  "SKM PTW", "ETAP", "Aspen", "Cyme", "Easy Power", "CDEGS", 
-  "PSCAD", "PSS-E", "DIGISILENT Power Factory", "Open DSS", "AutoCAD"
+const tools =
+[
+  "SKM PTW", "ETAP","Easy Power" ,"DIGISILENT Power Factory"
 ];
+//  [
+//   "SKM PTW", "ETAP", "Aspen", "Cyme", "Easy Power", "CDEGS", 
+//   "PSCAD", "PSS-E", "DIGISILENT Power Factory", "Open DSS", "AutoCAD"
+// ];
 
 const PowerSystemStudies = () => {
   return (
@@ -81,9 +89,9 @@ const PowerSystemStudies = () => {
       <section className="pt-20 pb-16 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4">Power System Studies</Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Comprehensive Power System Analysis
+            <Badge variant="outline" className="text-4xl md:text-5xl mb-4">Our Services</Badge>
+            <h1 className="text-3xl md:text-4xl font-bold mb-6">
+              Power System Studies
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Our Power System Studies services deliver comprehensive and accurate analysis of electrical systems 
@@ -102,7 +110,7 @@ const PowerSystemStudies = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Core Studies</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Power System Studies</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Ensuring a reliable, efficient, and resilient power system through expert analysis
             </p>
@@ -141,7 +149,8 @@ const PowerSystemStudies = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Additional Specialized Studies</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4"> Our extended system 
+analysis but not limited to..</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive analysis solutions for complex power system challenges
             </p>
@@ -169,7 +178,7 @@ const PowerSystemStudies = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Tools & Standards</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">We are Driven by Tools, Guided by Standards</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We leverage industry-leading software and comply with international standards for accurate analysis
             </p>
@@ -197,7 +206,8 @@ const PowerSystemStudies = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                  {["NEC", "IEEE", "IEC", "IS", "CSA", "International"].map((standard, index) => (
+                  {/* {["NEC", "IEEE", "IEC", "IS", "CSA", "International"].map((standard, index) => ( */}
+                  {["NEC", "IEEE", "IEC", "IS/CEA", "CSA", "International"].map((standard, index) => (
                     <Badge key={index} variant="outline" className="justify-center p-3 text-sm">
                       {standard}
                     </Badge>

@@ -26,8 +26,7 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-            Driving <span className="green-highlight">Sustainable</span>
-            Innovations
+            Driving <span className="green-highlight">Sustainable</span> Innovations
           </h1>
 
           {/* Subtitle */}
@@ -37,17 +36,17 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-green transition-smooth group">
+            {/* <Button size="lg" className="bg-gradient-primary hover:shadow-green transition-smooth group">
               LET'S EXPLORE
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            </Button> */}
             <Button size="lg" variant="outline" className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm transition-smooth">
               CONTACT US
             </Button>
           </div>
 
           {/* Trust Indicator */}
-          <div className="flex items-center justify-center space-x-4 text-white/80">
+          {/* <div className="flex items-center justify-center space-x-4 text-white/80">
             <div className="flex -space-x-2">
               <div className="w-10 h-10 rounded-full bg-white/20 border-2 border-white/30 flex items-center justify-center">
                 <Users className="w-5 h-5" />
@@ -56,7 +55,7 @@ const Hero = () => {
               <div className="w-10 h-10 rounded-full bg-white/20 border-2 border-white/30" />
             </div>
             <span className="text-lg">Fortune 500 collaborations & industry expertise</span>
-          </div>
+          </div> */}
         </div>
       </div>
 
